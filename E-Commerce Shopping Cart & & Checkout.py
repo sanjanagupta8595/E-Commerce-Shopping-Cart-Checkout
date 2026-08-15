@@ -35,13 +35,38 @@ product_list = {
                  "5 SET OF FORK":320,
                  "2 SET OF PLATE": 160,
                  "3 SET OF CUP":150,
-                 "COOKER":400}
+                 "COOKER":400},
                 }
 
 print(product_list)
 
 print("SELECT ITEMS IN THIS PRODUCT LIST")
-choose_items = input("ENTER YOUR ITEMS : " )
+
+i=0
+total = 0
+while i <= 50:
+    item = input("ENTER YOUR ITEM : ").upper()
+
+    if item=="QUIT":
+        break
+
+    found = False
+    price = 0
+
+    for category in product_list.values() :
+        if item in category:
+            found = True 
+            price = category[item]
+            break
+
+    if found:        
+        print(f"your listed item : {item}")
+        print(f"price : Rs {price}")
+        total +=price
+        i+=1
+    else:
+        print(f" '{item}'item is not available. please choose from list")
+
+print(f"Your total bill is : Rs{total}")
 
 
- 
