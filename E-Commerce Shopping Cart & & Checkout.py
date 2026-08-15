@@ -38,9 +38,6 @@ product_list = {
                  "COOKER":400},
                 }
 
-print(product_list)
-
-print("SELECT ITEMS IN THIS PRODUCT LIST")
 
 i=0
 total = 0
