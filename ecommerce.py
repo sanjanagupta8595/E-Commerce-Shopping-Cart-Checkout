@@ -39,32 +39,32 @@ product_list = {
                 }
 exit = "QUIT"
 
-
-i=0 
+i = 0
 total = 0
-while i <= 50:
-    item = input("ENTER YOUR ITEM : ").upper()
+while i<=1000:
+    item = input("Enter your item : ").upper()
 
-    if item=="QUIT":
+    if item == "QUIT":
         break
 
     found = False
     price = 0
 
-    for category in product_list.values() :
+    for category in product_list.values():
         if item in category:
-            found = True 
+            found = True
             price = category[item]
             break
 
-    if found:        
-        print(f"your listed item : {item}")
-        print(f"price : Rs {price}")
-        total +=price
-        i+=1
-    else:
-        print(f" '{item}'item is not available. please choose from list")
+    if found:
+            print(f"Your listed item : {item}")
+            print (f"price : {price}")
+            total +=price
+            i +=1
+    else :
+            print (f"{item} : product is not found")
 
-print(f"Your total bill is : Rs{total}")
+print(f"your total bill : {total}")
 
-
+print("thanks for shopping")
+print("HAVE A NICE DAY")
